@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./routes/homePage/HomePage.jsx";
@@ -8,6 +7,8 @@ import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout.jsx";
 import DashBoardPage from "./routes/DashBoardPage/DashBoardPage.jsx";
 import ChatPage from "./routes/chatPage/ChatPage.jsx";
 import RootLayout from "./layouts/rootLayout/RootLayout.jsx";
+import SignInPage from "./routes/signInPage/signInPage.jsx";
+import SignUpPage from "./routes/signUpPage/signUpPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/sign-in/*",
+        element: <SignInPage/>,
+      },
+      {
+        path: "/sign-up/*",
+        element: <SignUpPage />,
       },
       {
         element: <DashboardLayout />,

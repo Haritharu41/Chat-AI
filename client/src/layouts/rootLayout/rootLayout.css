@@ -1,14 +1,14 @@
 .rootLayout {
   padding: 16px 64px;
   height: 100vh;
-
+  display: flex;
+  flex-direction: column;
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-   
+
     .logo {
       display: flex;
       align-items: center;
@@ -22,5 +22,10 @@
         height: 32px;
       }
     }
+  }
+
+  main{
+    flex: 1;
+    /* background-color: blue; */
   }
 }
